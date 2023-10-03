@@ -1,0 +1,60 @@
+@import '../variables';
+
+/** General styles of all header items goes here: */
+nav.navbar {
+    font-family: map-get($fonts, 'cairo');
+    font-weight: 400;
+}
+
+/** header is separated into two layers: top, bottom */
+
+/** working on top layer */
+nav[aria-label='navigation'] header.top__layer {
+    /** content display */
+    display: flex;
+    align-items: flex-start;
+    background-color: map-get($colors , 'erie-black');
+    padding: .9rem 1rem .2rem 1.2rem;
+
+    /** left logo styling */
+        .nav__logo {
+            max-width: 77.25px;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+            }
+        }
+
+    /** search box styling */
+    div.search-box {
+        display: flex;
+        align-items: center;
+        
+        input.field {
+            border: none;
+            padding: .33rem .5rem;
+        }
+
+        input.field:focus {
+            outline: none;
+        }
+
+        div.search__icon {
+            cursor: pointer;
+            padding: .3rem .5rem;
+            border-top-right-radius: .2rem;
+            border-bottom-right-radius: .2rem;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            background-color: map-get($colors, 'apricot-orange');
+            transition: .1s all ease;
+        }
+
+        div.search__icon:hover {
+            --hovered: hsl(44, 80%, 59%);
+            background-color: var(--hovered) !important;
+        }
+    }
+}

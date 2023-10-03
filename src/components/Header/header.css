@@ -1,0 +1,50 @@
+/** General styles of all header items goes here: */
+nav.navbar {
+  font-family: "Cairo, sans-serif";
+  font-weight: 400;
+}
+
+/** header is separated into two layers: top, bottom */
+/** working on top layer */
+nav[aria-label=navigation] header.top__layer {
+  /** content display */
+  display: flex;
+  align-items: flex-start;
+  background-color: #131A22;
+  padding: 0.9rem 1rem 0.2rem 1.2rem;
+  /** left logo styling */
+  /** search box styling */
+}
+nav[aria-label=navigation] header.top__layer .nav__logo {
+  max-width: 77.25px;
+  cursor: pointer;
+}
+nav[aria-label=navigation] header.top__layer .nav__logo img {
+  width: 100%;
+}
+nav[aria-label=navigation] header.top__layer div.search-box {
+  display: flex;
+  align-items: center;
+}
+nav[aria-label=navigation] header.top__layer div.search-box input.field {
+  border: none;
+  padding: 0.33rem 0.5rem;
+}
+nav[aria-label=navigation] header.top__layer div.search-box input.field:focus {
+  outline: none;
+}
+nav[aria-label=navigation] header.top__layer div.search-box div.search__icon {
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background-color: #febd69;
+  transition: 0.1s all ease;
+}
+nav[aria-label=navigation] header.top__layer div.search-box div.search__icon:hover {
+  --hovered: hsl(44, 80%, 59%);
+  background-color: var(--hovered) !important;
+}/*# sourceMappingURL=header.css.map */
